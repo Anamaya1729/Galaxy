@@ -1,5 +1,23 @@
+#:import menu menu
+
 MainWidget:
 
 <MainWidget>:
+    canvas.before:
+        Rectangle:
+            size: self.size
+            source: "Images/img1.jpg"
+
+    menu_widget: menu_widget
     perspectivePoint_x : self.width /2
     perspectivePoint_y :self.height * 0.75
+    
+
+    MenuWidget:
+        id : menu_widget
+    Label:
+        font_size: dp(25)
+        font_name: "fonts/Eurostile.ttf"
+        text: root.Score
+        size_hint: .3,.3
+        pos_hint: {"x": 0, "top": 1} 
