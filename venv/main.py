@@ -19,7 +19,7 @@ Builder.load_file("menu.kv")
 class MainWidget(RelativeLayout):
     from User_actions import on_keyboard_up,on_keyboard_down,on_touch_up,on_touch_down,keyboard_closed
     menu_widget = ObjectProperty()
-    menu_title = StringProperty("U   N   I   V   E   R   S   E")
+    menu_title = StringProperty("G   A   L   A   X   Y")
     button_title = StringProperty("START")
     perspectivePoint_x = NumericProperty(0)
     perspectivePoint_y = NumericProperty(0)
