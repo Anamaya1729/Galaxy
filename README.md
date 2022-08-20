@@ -1,5 +1,6 @@
 # Galaxy:
-This is a game made in python. It has path generation algorithm and and collision detection. It works in 2-Dimensional plane but it looks to work in 3D plane.
+This is a game made in python. It has path generation algorithm and collision detection. 
+It was created in 2-Dimensions, but it has perspective transformation function that tranforms the view in 3-Dimensions.
 
-# Requirements: 
+## Requirements: 
 Kivy
