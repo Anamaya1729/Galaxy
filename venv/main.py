@@ -63,6 +63,7 @@ class MainWidget(RelativeLayout):
     def __init__(self, **kwargs):
         super(MainWidget, self).__init__(**kwargs)
         self.Sound_Loader()
+        self.Sound_init()
         self.initVerticalLines()
         self.initHorizontalLines()
         self.initTiles()
@@ -81,6 +82,7 @@ class MainWidget(RelativeLayout):
         self.gameover_Voice = SoundLoader.load("audio/gameover_voice.wav")
         self.Music1 = SoundLoader.load("audio/Music2.mp3")
         self.restart_Sound = SoundLoader.load("audio/restart.wav")
+
     def Sound_init(self):
         self.Music1.volume = .7
         #self.gameover_Sound.volume = .6
