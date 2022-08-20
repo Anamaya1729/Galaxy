@@ -85,10 +85,10 @@ class MainWidget(RelativeLayout):
 
     def Sound_init(self):
         self.Music1.volume = .7
-        #self.gameover_Sound.volume = .6
-        #self.gameover_Voice.volume = .25
-        #self.restart_Sound.volume = .25
-        #self.begin_Sound.volume = .25
+        self.gameover_Sound.volume = .6
+        self.gameover_Voice.volume = .25
+        self.restart_Sound.volume = .25
+        self.begin_Sound.volume = .25
 
 
     def game_reset(self):
@@ -142,17 +142,17 @@ class MainWidget(RelativeLayout):
     
     def on_game_start_press(self):
         print("Start??")
-        #if self.GAME_OVER:
-         #   self.restart_Sound.play()
-        #else:
-         #   self.begin_Sound.play()
-        #self.Music1.play()
+        if self.GAME_OVER:
+            self.restart_Sound.play()
+        else:
+            self.begin_Sound.play()
+        self.Music1.play()
         self.game_reset()
         self.GAME_STARTED = True
         self.menu_widget.opacity= 0
 
     def play_game_music(self,dt):
-        #self.Music1.play()
+        self.Music1.play()
         pass
 
     def is_desktop(self):
@@ -317,8 +317,8 @@ class MainWidget(RelativeLayout):
             self.current_offset_x += x_speed*time_factor
         if not self.check_ship_collsision() and not self.GAME_OVER:
             self.GAME_OVER = True
-            #self.Music1.stop()
-            #self.gameover_Sound.play()
+            self.Music1.stop()
+            self.gameover_Sound.play()
             self.menu_title = "G  A  M  E    O  V  E  R"
             self.button_title = "RESTART"
             self.menu_widget.opacity = 1
@@ -327,7 +327,7 @@ class MainWidget(RelativeLayout):
     
     def play_gameover_voice(self, dt):
         if self.GAME_OVER:
-            #self.gameover_Voice.play()
+            self.gameover_Voice.play()
             pass
 
 if __name__ == "__main__":
