@@ -1,3 +1,1 @@
 kivy
-numpy
-cmake
