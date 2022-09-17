@@ -330,6 +330,7 @@ class MainWidget(RelativeLayout):
             self.gameover_Voice.play()
             pass
 
+#testing
 if __name__ == "__main__":
     class GalaxyApp(App):
         pass
